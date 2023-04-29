@@ -1,0 +1,1 @@
+https://captures.lumalabs.ai/embed/innocuous-amusing-g-336820?mode=slf&background=%23c0bfbc&color=%2377767b&showTitle=false&loadBg=true&logoPosition=bottom-left&infoPosition=bottom-right&cinematicVideo=undefined&showMenu=false

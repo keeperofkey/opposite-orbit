@@ -1,0 +1,1 @@
+https://captures.lumalabs.ai/embed/clever-hearten-dn-261216?mode=slf&background=%23ffffff&color=%23000000&showTitle=true&loadBg=true&logoPosition=bottom-left&infoPosition=bottom-right&cinematicVideo=undefined&showMenu=false

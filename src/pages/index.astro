@@ -2,16 +2,15 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Luma from '../components/Luma.astro';
+import { getCollection, getEntryBySlug } from 'astro:content';
+
+const nerfURL = await getEntryBySlug('luma','can-01')
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
 		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<Luma src="https://captures.lumalabs.ai/embed/innocuous-amusing-g-336820?mode=slf&background=%23c0bfbc&color=%2377767b&showTitle=false&loadBg=true&logoPosition=bottom-left&infoPosition=bottom-right&cinematicVideo=undefined&showMenu=false"/>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
+		<Luma src={nerfURL.body} />
 		<ul role="list" class="link-card-grid">
 			<Card
 				href="https://docs.astro.build/"
