@@ -1,20 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import Luma from '../components/Luma.astro';
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
 		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<iframe 
-		src="https://captures.lumalabs.ai/embed/innocuous-amusing-g-336820?mode=slf&background=%23c0bfbc&color=%2377767b&showTitle=false&loadBg=true&logoPosition=bottom-left&infoPosition=bottom-right&cinematicVideo=undefined&showMenu=false" 
-		width="500" 
-		height="500" 
-		frameborder="0" 
-		title="luma embed" 
-		style="border: none;"
-		></iframe>
-
+		<Luma src="https://captures.lumalabs.ai/embed/innocuous-amusing-g-336820?mode=slf&background=%23c0bfbc&color=%2377767b&showTitle=false&loadBg=true&logoPosition=bottom-left&infoPosition=bottom-right&cinematicVideo=undefined&showMenu=false"/>
 		<p class="instructions">
 			To get started, open the directory <code>src/pages</code> in your project.<br />
 			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
@@ -48,7 +41,13 @@ import Card from '../components/Card.astro';
 	main {
 		margin: auto;
 		padding: 1.5rem;
-		max-width: 60ch;
+		max-width: 160ch;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		grid-column-gap: 0px;
+		grid-row-gap: 0px;
+
 	}
 	h1 {
 		font-size: 3rem;
