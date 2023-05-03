@@ -7,7 +7,7 @@ const blogCollection = defineCollection({
 			message: "image must be at least 1080p"
 		}),
 		coverAlt: z.string(),
-	});
+	})
 });
 
 export const collections = {
