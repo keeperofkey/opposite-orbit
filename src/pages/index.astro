@@ -3,7 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Luma from '../components/Luma.astro';
 import { getCollection, getEntryBySlug } from 'astro:content';
-
+import can from '../assets/1-can.jpg';
+import Image from '../components/Images.astro';
 const nerfURL = await getEntryBySlug('luma','can-01')
 ---
 
@@ -11,6 +12,7 @@ const nerfURL = await getEntryBySlug('luma','can-01')
 	<main>
 		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
 		<Luma src={nerfURL.body} />
+		<Image />
 		<ul role="list" class="link-card-grid">
 			<Card
 				href="https://docs.astro.build/"
