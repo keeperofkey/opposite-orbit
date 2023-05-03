@@ -1,0 +1,25 @@
+---
+import Model from '../../elements/Model/Model.astro';
+import ModelLoader from '../../elements/ModelLoader/ModelLoader.astro';
+import styles from './styles.scss?inline';
+---
+
+<style is:inline set:html={styles}></style>
+
+<Model
+  src="/models/can_ribbon.glb"
+  light="/models/light.hdr"
+  fallback={['/models/can.svg', '/models/can.svg']}
+  min-camera-orbit="-800deg 22.5deg 80m"
+/>
+
+<ModelLoader class="loader-joya" />
+
+<script type="module" hoist>
+  import stageLoader from '../../scripts/stageLoader.js'
+
+  stageLoader('model', {
+    desktop: () => import('./desktop.js'),
+    mobile: () => import('./mobile.js'),
+  })
+</script>
