@@ -1,18 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Luma from '../components/Luma.astro';
-import { getCollection, getEntryBySlug } from 'astro:content';
-import { Image } from 'astro:assets';
-import localImage from "../assets/images/cans-0.png";
-import Model from '../components/ModelJoya/ModelJoya.astro';
-const nerfURL = await getEntryBySlug('luma','can-01');
-
+import ModelJoya from '../components/ModelJoya/ModelJoya.astro';
+import Background from '../elements/Background/Background.astro';
+import Dust from '../elements/Dust/Dust.astro'
+import Hero from '../components/Hero/Hero.astro'
 ---
 
 <Layout title="Joya: Artist in Residence">
-	<h1><span class="text-gradient">Joya: </span>Artist in Residence</h1>
+	<h1><span class="text-gradient">Joya: </span>AiR</h1>
 	<main>
-		<Model />
+		<Background />
+		<ModelJoya />
+		<Dust />
 	</main>
 </Layout>
 
@@ -21,12 +20,13 @@ const nerfURL = await getEntryBySlug('luma','can-01');
 		margin: auto;
 		padding: 1.5rem;
 		max-width: 160ch;
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		background-color: grey;
+		/*display: grid;
+		/*	grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: repeat(3, 1fr);
 		grid-column-gap: 0.5em;
 		grid-row-gap: 0.5em;
-
+		*/
 	}
 	h1 {
 		font-size: 3rem;

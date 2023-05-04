@@ -1,9 +1,7 @@
 import Bezier from 'bezier-easing'
-import * as dust from '../../elements/Dust/scripts.js'
 import * as model from '../../elements/Model/desktop.js'
 
 export async function create () {
-  dust.create()
   await model.create({
     easing: Bezier(.6,0,0,.6),
     stages: [
@@ -17,6 +15,5 @@ export async function create () {
 }
 
 export function destroy () {
-  dust.destroy()
   model.destroy()
 }
