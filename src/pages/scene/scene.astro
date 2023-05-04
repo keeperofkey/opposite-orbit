@@ -1,0 +1,42 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<script is:inline src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+<Layout title="Scene">
+	<h1><span class="text-gradient">Viewer: </span>Basic</h1>
+
+	<main>
+		<model-viewer src="can_ribbon.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1" camera-orbit="-139.4deg 77.79deg 21.25m" field-of-view="20.35deg" min-camera-orbit="-180deg 19deg 21.25m" max-camera-orbit="-95deg 94deg auto" min-field-of-view="23.21deg" environment-image="aircraft_workshop_01_1k.hdr" exposure="1.5">
+	<main />
+</Layout>
+<style>
+	main {
+		margin: auto;
+		padding: 1.5rem;
+		max-width: 160ch;
+		height: 100vh;
+		/*display: grid;
+		/*	grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		grid-column-gap: 0.5em;
+		grid-row-gap: 0.5em;
+		*/
+	}
+	h1 {
+		font-size: 3rem;
+		font-weight: 800;
+		margin: 0;
+	}
+	model-viewer {
+		display:block;
+		width: 100%;
+		height: 100%;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+</style>
